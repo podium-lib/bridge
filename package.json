@@ -1,0 +1,39 @@
+{
+  "name": "@podium/bridge",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "lib/bridge.js",
+  "types": "types/bridge.d.ts",
+  "scripts": {
+    "lint": "eslint lib/ tests/",
+    "test": "node --test && tsc --project tsconfig.test.json",
+    "types": "tsc --declaration --emitDeclarationOnly && ./fixup.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/podium-lib/bridge.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/podium-lib/bridge/issues"
+  },
+  "homepage": "https://github.com/podium-lib/bridge#readme",
+  "devDependencies": {
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/commit-analyzer": "12.0.0",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/github": "10.0.3",
+    "@semantic-release/npm": "12.0.1",
+    "@semantic-release/release-notes-generator": "13.0.0",
+    "@types/node": "20.12.12",
+    "eslint": "9.2.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "globals": "15.2.0",
+    "prettier": "3.2.5",
+    "semantic-release": "23.1.1",
+    "typescript": "5.4.5"
+  }
+}
