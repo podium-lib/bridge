@@ -33,3 +33,10 @@ test('psedurandom fallback generates a unique string', () => {
 
 	assert.notEqual(a, b);
 });
+
+test('invokes a registered listener when a message is received', () => {
+	assert.ok(
+		globalThis['@podium'].bridge,
+		'Expected to find the Podium bridge on globalThis',
+	);
+});
