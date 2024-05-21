@@ -34,9 +34,66 @@ test('psedurandom fallback generates a unique string', () => {
 	assert.notEqual(a, b);
 });
 
-test('invokes a registered listener when a message is received', () => {
+test('invokes a registered listener when a message is received', (t, done) => {
 	assert.ok(
 		globalThis['@podium'].bridge,
 		'Expected to find the Podium bridge on globalThis',
 	);
+
+	const rpcRequest = {
+		method: 'foo/bar',
+		params: ['Hello', 'World!'],
+		jsonrpc: '2.0',
+	};
+
+	/** @type {import("../lib/bridge.js").PodiumBridge} */
+	const bridge = globalThis['@podium'].bridge;
+	bridge.on('foo/bar', (message) => {
+		const request =
+			/** @type {import("../lib/bridge.js").RpcRequest<string[]>} */ (message);
+		assert.deepStrictEqual(request, rpcRequest);
+		done();
+	});
+
+	globalThis.window.dispatchEvent(
+		new globalThis.window.CustomEvent('rpcbridge', {
+			detail: rpcRequest,
+		}),
+	);
+});
+
+test('unsubscribe should remove subscribed listener', () => {
+	assert.ok(
+		globalThis['@podium'].bridge,
+		'Expected to find the Podium bridge on globalThis',
+	);
+
+	/** @type {import("../lib/bridge.js").PodiumBridge} */
+	const bridge = globalThis['@podium'].bridge;
+
+	let counter = 0;
+	/** @type {import("../lib/bridge.js").EventHandler<unknown>} */
+	const listener = () => {
+		counter += 1;
+	};
+	bridge.on('bar/baz', listener);
+
+	const event = new globalThis.window.CustomEvent('rpcbridge', {
+		detail: {
+			method: 'bar/baz',
+			params: ['Hello', 'World!'],
+			jsonrpc: '2.0',
+		},
+	});
+
+	globalThis.window.dispatchEvent(event);
+	globalThis.window.dispatchEvent(event);
+
+	assert.equal(counter, 2);
+
+	bridge.off('bar/baz', listener);
+
+	globalThis.window.dispatchEvent(event);
+
+	assert.equal(counter, 2);
 });
