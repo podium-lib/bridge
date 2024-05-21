@@ -36,7 +36,7 @@ test('psedurandom fallback generates a unique string', () => {
 
 test('invokes a registered listener when a message is received', (t, done) => {
 	assert.ok(
-		globalThis['@podium'].bridge,
+		globalThis.window['@podium'].bridge,
 		'Expected to find the Podium bridge on globalThis',
 	);
 
@@ -47,7 +47,7 @@ test('invokes a registered listener when a message is received', (t, done) => {
 	};
 
 	/** @type {import("../lib/bridge.js").PodiumBridge} */
-	const bridge = globalThis['@podium'].bridge;
+	const bridge = globalThis.window['@podium'].bridge;
 	bridge.on('foo/bar', (message) => {
 		const request =
 			/** @type {import("../lib/bridge.js").RpcRequest<string[]>} */ (message);
@@ -64,12 +64,12 @@ test('invokes a registered listener when a message is received', (t, done) => {
 
 test('unsubscribe should remove subscribed listener', () => {
 	assert.ok(
-		globalThis['@podium'].bridge,
+		globalThis.window['@podium'].bridge,
 		'Expected to find the Podium bridge on globalThis',
 	);
 
 	/** @type {import("../lib/bridge.js").PodiumBridge} */
-	const bridge = globalThis['@podium'].bridge;
+	const bridge = globalThis.window['@podium'].bridge;
 
 	let counter = 0;
 	/** @type {import("../lib/bridge.js").EventHandler<unknown>} */
