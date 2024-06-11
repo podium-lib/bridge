@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "type": "module",
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "lib/bridge.js",
   "types": "types/bridge.d.ts",
   "scripts": {
