@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/podium-lib/bridge/compare/v1.0.0...v1.1.0) (2024-06-11)
+
+
+### Features
+
+* initial release ([a8b8f8f](https://github.com/podium-lib/bridge/commit/a8b8f8fc62fa0929b05f0a5975c0c1e043e96773))
+
 # 1.0.0 (2024-06-11)
 
 
