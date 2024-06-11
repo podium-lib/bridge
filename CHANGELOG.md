@@ -1,3 +1,15 @@
+# [1.2.0](https://github.com/podium-lib/bridge/compare/v1.1.0...v1.2.0) (2024-06-11)
+
+
+### Bug Fixes
+
+* revert to proper globalThis ([e6efd0f](https://github.com/podium-lib/bridge/commit/e6efd0f48bcd36d1d92b1d3da333707278ba3ae6))
+
+
+### Features
+
+* initial release ([61b9f07](https://github.com/podium-lib/bridge/commit/61b9f07fa68aee3d04d8110ebbd047a8d5802361))
+
 # [1.1.0](https://github.com/podium-lib/bridge/compare/v1.0.0...v1.1.0) (2024-06-11)
 
 
