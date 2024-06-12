@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/podium-lib/bridge/compare/v1.2.1...v1.2.2) (2024-06-12)
+
+
+### Bug Fixes
+
+* testing some wierd behaviour part 2 ([8358a44](https://github.com/podium-lib/bridge/commit/8358a4412b801bd8decd615dd1730bd9debb999b))
+
 ## [1.2.1](https://github.com/podium-lib/bridge/compare/v1.2.0...v1.2.1) (2024-06-12)
 
 
