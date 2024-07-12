@@ -12,8 +12,8 @@ export default [
 		},
 		languageOptions: {
 			globals: {
-				global: true,
 				...globals.browser,
+				...globals.node,
 			},
 		},
 	},
