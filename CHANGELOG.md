@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/podium-lib/bridge/compare/v1.2.2...v1.2.3) (2024-07-22)
+
+
+### Bug Fixes
+
+* remove event listener by correct name ([637827f](https://github.com/podium-lib/bridge/commit/637827f96cd270d5b9519e1a2f8c85bf459844ec))
+
 ## [1.2.2](https://github.com/podium-lib/bridge/compare/v1.2.1...v1.2.2) (2024-06-12)
 
 
