@@ -10,11 +10,10 @@
   "types": "types/bridge.d.ts",
   "scripts": {
     "lint": "eslint lib/ tests/",
-    "test": "run-s test:unit test:types",
-    "test:unit": "node --test",
-    "test:types": "tsc --project tsconfig.test.json",
-    "types": "run-s types:tsc types:fixup",
+    "test": "node --test",
+    "types": "run-s types:tsc types:fixup types:test",
     "types:tsc": "tsc --declaration --emitDeclarationOnly",
+    "types:test": "tsc --project tsconfig.test.json",
     "types:fixup": "node ./fixup.js"
   },
   "repository": {
@@ -29,16 +28,13 @@
   "homepage": "https://github.com/podium-lib/bridge#readme",
   "devDependencies": {
     "@podium/eslint-config": "1.0.0",
+    "@podium/typescript-config": "1.0.0",
     "@semantic-release/changelog": "6.0.3",
-    "@semantic-release/commit-analyzer": "12.0.0",
     "@semantic-release/git": "10.0.1",
-    "@semantic-release/github": "10.0.3",
-    "@semantic-release/npm": "12.0.1",
-    "@semantic-release/release-notes-generator": "13.0.0",
     "@types/node": "20.12.12",
     "eslint": "9.2.0",
     "jsdom": "24.0.0",
-    "npm-run-all": "4.1.5",
+    "npm-run-all2": "6.2.3",
     "prettier": "3.2.5",
     "semantic-release": "23.1.1",
     "typescript": "5.4.5"
