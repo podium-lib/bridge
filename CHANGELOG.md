@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/podium-lib/bridge/compare/v1.2.4...v1.2.5) (2024-09-30)
+
+
+### Bug Fixes
+
+* include types folder in files ([a4acddd](https://github.com/podium-lib/bridge/commit/a4acddd5e820be831212ce9fcf3174ea4da8fdbc))
+
 ## [1.2.4](https://github.com/podium-lib/bridge/compare/v1.2.3...v1.2.4) (2024-09-30)
 
 
