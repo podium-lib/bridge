@@ -8,6 +8,10 @@
   },
   "main": "lib/bridge.js",
   "types": "types/bridge.d.ts",
+  "files": [
+    "lib",
+    "types"
+  ],
   "scripts": {
     "lint": "eslint lib/ tests/",
     "test": "node --test",
