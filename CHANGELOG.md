@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/podium-lib/bridge/compare/v1.2.3...v1.2.4) (2024-09-30)
+
+
+### Bug Fixes
+
+* type generation ([383b21d](https://github.com/podium-lib/bridge/commit/383b21d46889f3ae0c491efbf7d0906f71341ae3))
+
 ## [1.2.3](https://github.com/podium-lib/bridge/compare/v1.2.2...v1.2.3) (2024-07-22)
 
 
