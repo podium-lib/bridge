@@ -34,7 +34,7 @@
     "@podium/eslint-config": "1.0.20",
     "@podium/semantic-release-config": "3.0.0",
     "@podium/typescript-config": "1.0.0",
-    "@types/node": "20.19.9",
+    "@types/node": "20.19.26",
     "eslint": "9.39.1",
     "jsdom": "27.3.0",
     "npm-run-all2": "8.0.4",
