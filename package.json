@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/podium-lib/bridge#readme",
   "devDependencies": {
-    "@podium/eslint-config": "1.0.21",
+    "@podium/eslint-config": "2.0.2",
     "@podium/semantic-release-config": "3.0.0",
     "@podium/typescript-config": "1.0.0",
     "@types/node": "20.19.35",
